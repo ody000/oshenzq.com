@@ -1,0 +1,22 @@
+# Captions for the Arts gallery.
+# Format:   filename.jpg | caption
+# Lines starting with # are ignored, so nothing below appears on the site yet.
+#
+# I have guessed at each piece from the image alone — check them, fix anything
+# wrong, then delete the leading "# " to publish that caption.
+# A good caption is: Title — medium, year.   e.g.   Hands — charcoal, 2022
+#
+# art-01.jpg | Portrait of a man in a hat — oil
+# art-02.jpg | Figure with animal — colour study
+# art-03.jpg | Elderly man — graphite
+# art-04.jpg | Portrait of a young woman — graphite
+# art-05.jpg | Portrait in chiaroscuro — oil
+# art-06.jpg | Seated figure — charcoal study
+# art-07.jpg | Crouching figure — life study
+# art-08.jpg | Still life with bottles — oil
+# art-09.jpg | Portrait — charcoal
+# art-10.jpg | Portrait with headscarf — oil
+# art-11.jpg | Figure — gongbi
+# art-12.jpg | Male torso — charcoal
+# art-13.jpg | Studies of hands — charcoal
+# art-14.jpg | Portrait of an elderly woman — charcoal

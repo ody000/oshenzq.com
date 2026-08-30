@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{title_tag}}</title>
+<meta name="description" content="{{description}}">
+{{robots}}
+<link rel="canonical" href="{{canonical}}">
+<link rel="preload" href="/assets/fonts/SourceSerif4-Regular-subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/SourceSans3-Variable-subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{title_tag}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{site_url}}/assets/img/portrait.jpg">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="/">Ziqi Shen<span class="cn">沈子棋</span></a>
+      <nav class="site">{{nav}}</nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+{{content}}
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 22px;width:100%">
+    <span>Ziqi Shen · Providence, RI</span>
+    <span class="links">
+      <a href="/assets/pdf/ziqi-shen-cv.pdf">CV</a>
+      <a href="/assets/pdf/ziqi-shen-resume.pdf">Résumé</a>
+      <a href="mailto:ziqi_shen@brown.edu">Email</a>
+      <a href="https://github.com/ody000" rel="me">GitHub</a>
+      <a href="https://www.linkedin.com/in/ziqi-shen-266b04282" rel="me">LinkedIn</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

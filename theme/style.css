@@ -1,0 +1,199 @@
+/* ============================================================
+   oshenzq.com — achromatic editorial theme
+   Light only. No motion. Black, white, grey.
+   ============================================================ */
+
+@font-face{font-family:'Source Serif 4';src:url('/assets/fonts/SourceSerif4-Regular-subset.woff2')format('woff2');
+  font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Source Serif 4';src:url('/assets/fonts/SourceSerif4-Semibold-subset.woff2')format('woff2');
+  font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Source Sans 3';src:url('/assets/fonts/SourceSans3-Variable-subset.woff2')format('woff2');
+  font-weight:400 700;font-style:normal;font-display:swap}
+
+:root{
+  /* strictly achromatic — no hue anywhere */
+  --bg:        #ffffff;
+  --bg-sunk:   #f6f6f6;
+  --ink:       #111111;
+  --ink-soft:  #333333;
+  --ink-body:  #262626;
+  --muted:     #6e6e6e;   /* 5.0:1 on white — safe for body-size text */
+  --faint:     #8a8a8a;   /* decorative / large text only */
+  --rule:      #e2e2e2;
+  --rule-mid:  #cfcfcf;
+
+  --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --sans:  'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --cjk:   'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+
+  --measure: 68ch;
+  --col: 720px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink-body);
+  font-family:var(--serif);
+  font-size:19px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  font-kerning:normal;
+  text-rendering:optimizeLegibility;
+}
+
+.wrap{max-width:var(--col);margin:0 auto;padding:0 28px}
+
+/* ---------- header ---------- */
+.masthead{padding:46px 0 0}
+.masthead .bar{
+  display:flex;justify-content:space-between;align-items:baseline;gap:24px;
+  border-bottom:1px solid var(--ink);padding-bottom:13px;
+}
+.brand{font-size:19px;font-weight:600;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.brand:hover{text-decoration:none}
+.brand .cn{font-family:var(--cjk);font-weight:400;color:var(--faint);margin-left:9px;font-size:17px;letter-spacing:.02em}
+nav.site{font-family:var(--sans);display:flex;gap:23px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+nav.site a{color:var(--muted);text-decoration:none}
+nav.site a:hover{color:var(--ink)}
+nav.site a[aria-current="page"]{color:var(--ink);font-weight:600}
+
+/* ---------- main ---------- */
+main{padding:52px 0 0;min-height:52vh}
+main > *:first-child{margin-top:0}
+
+h1,h2,h3,h4{color:var(--ink);font-weight:600;letter-spacing:-.012em}
+h1{font-size:33px;line-height:1.18;font-weight:400;margin:0 0 26px;letter-spacing:-.02em}
+h2{
+  font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.19em;
+  text-transform:uppercase;color:var(--faint);
+  margin:58px 0 0;padding-bottom:12px;border-bottom:1px solid var(--rule);
+}
+h3{font-size:21px;line-height:1.3;margin:34px 0 8px}
+h4{font-family:var(--sans);font-size:15px;margin:26px 0 6px;letter-spacing:0}
+
+p{margin:0 0 19px;max-width:var(--measure)}
+ul,ol{max-width:var(--measure);padding-left:1.15em;margin:0 0 19px}
+li{margin-bottom:7px}
+li::marker{color:var(--faint)}
+
+a{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2.5px;
+  text-decoration-color:var(--rule-mid)}
+a:hover{text-decoration-color:var(--ink)}
+
+strong{font-weight:600;color:var(--ink)}
+em{font-style:italic}
+
+blockquote{
+  margin:26px 0;padding-left:22px;border-left:1px solid var(--rule-mid);
+  color:var(--muted);font-style:italic;max-width:var(--measure);
+}
+hr{border:0;border-top:1px solid var(--rule);margin:44px 0}
+
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.87em;background:var(--bg-sunk);padding:1px 5px}
+pre{background:var(--bg-sunk);padding:16px 18px;overflow-x:auto;font-size:14px;line-height:1.5}
+pre code{background:none;padding:0}
+
+table{border-collapse:collapse;width:100%;max-width:var(--measure);font-size:16.5px;margin:0 0 22px}
+th,td{text-align:left;padding:9px 12px 9px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--sans);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600}
+
+img{max-width:100%;height:auto;display:block}
+
+/* ---------- lede: intro + portrait ---------- */
+.lede{display:grid;grid-template-columns:1fr 196px;gap:38px;align-items:start;margin-bottom:6px}
+.lede .portrait{width:196px;margin-top:6px}
+.lede .portrait img{width:100%;aspect-ratio:1066/1600;object-fit:cover;background:var(--bg-sunk)}
+.lede p:last-of-type{margin-bottom:0}
+
+/* small link row under the intro (CV · Résumé · Email …) */
+.quicklinks{
+  font-family:var(--sans);font-size:13.5px;letter-spacing:.03em;
+  margin:22px 0 0;padding-top:16px;border-top:1px solid var(--rule);
+  max-width:var(--measure);
+}
+.quicklinks p{display:flex;flex-wrap:wrap;gap:7px 20px;margin:0;max-width:none}
+.quicklinks a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule-mid);padding-bottom:1px}
+.quicklinks a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* ---------- entry rows (research, documents, timeline) ---------- */
+.entries{margin:0}
+.entry{
+  display:grid;grid-template-columns:104px 1fr;gap:26px;
+  padding:23px 0;border-bottom:1px solid var(--rule);
+}
+.entry:last-child{border-bottom:none}
+.entry .when{
+  font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.05em;
+  color:var(--faint);padding-top:6px;font-variant-numeric:tabular-nums;
+}
+.entry .what{min-width:0}
+.entry .title{font-size:20px;font-weight:600;letter-spacing:-.012em;color:var(--ink);margin:0 0 3px;line-height:1.32}
+.entry .title a{text-decoration:underline;text-decoration-thickness:1px;
+  text-underline-offset:3px;text-decoration-color:var(--rule-mid)}
+.entry .title a:hover{text-decoration-color:var(--ink)}
+.entry .where{font-family:var(--sans);font-size:13.5px;color:var(--muted);margin:0 0 9px;line-height:1.45}
+.entry p{font-size:17px;line-height:1.55;color:var(--ink-soft);margin:0 0 10px;max-width:60ch}
+.entry p:last-child{margin-bottom:0}
+.entry ul{font-size:17px;line-height:1.55;color:var(--ink-soft);margin:0;max-width:60ch}
+
+/* ---------- galleries ---------- */
+.gallery{
+  display:grid;gap:16px;margin:26px 0 8px;
+  grid-template-columns:repeat(auto-fill,minmax(196px,1fr));
+}
+.gallery figure{margin:0}
+.gallery a{display:block;text-decoration:none;background:var(--bg-sunk)}
+.gallery img{width:100%;height:250px;background:var(--bg-sunk)}
+/* artwork is never cropped — letterboxed on neutral grey, gallery-style */
+.gallery.art img{object-fit:contain;padding:10px}
+/* photographs crop fine */
+.gallery.photo img{object-fit:cover}
+.gallery a:hover img{outline:1px solid var(--ink);outline-offset:-1px}
+.gallery figcaption{font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:7px;line-height:1.4}
+
+/* full-bleed-ish single image inside prose */
+figure.plate{margin:30px 0}
+figure.plate img{width:100%;background:var(--bg-sunk)}
+figure.plate figcaption{font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:8px}
+
+/* ---------- footer ---------- */
+footer.site{
+  margin-top:76px;padding:22px 0 56px;border-top:1px solid var(--rule);
+  font-family:var(--sans);font-size:13px;color:var(--muted);
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 22px;
+}
+footer.site a{color:var(--muted);text-decoration:none;border-bottom:1px solid var(--rule-mid);padding-bottom:1px}
+footer.site a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+footer.site .links{display:flex;flex-wrap:wrap;gap:0 17px}
+
+/* ---------- responsive ---------- */
+@media (max-width:720px){
+  body{font-size:18px}
+  .wrap{padding:0 20px}
+  .masthead{padding:30px 0 0}
+  .masthead .bar{flex-direction:column;align-items:flex-start;gap:14px}
+  nav.site{gap:17px;font-size:12.5px;flex-wrap:wrap}
+  main{padding:38px 0 0}
+  h1{font-size:28px}
+  .lede{grid-template-columns:1fr;gap:24px}
+  .lede .portrait{width:170px;order:-1}
+  .entry{grid-template-columns:1fr;gap:5px}
+  .entry .when{padding-top:0;margin-bottom:2px}
+  .gallery{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+  .gallery img{height:190px}
+  footer.site{flex-direction:column;gap:12px}
+}
+
+/* ---------- print ---------- */
+@media print{
+  nav.site,footer.site,.quicklinks{display:none}
+  body{font-size:11pt;color:#000}
+  .wrap{max-width:none;padding:0}
+  a{text-decoration:none;color:#000}
+  .entry{break-inside:avoid}
+}

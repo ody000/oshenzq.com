@@ -1,0 +1,11 @@
+# Captions for the Badminton gallery.
+# Format:   filename.jpg | caption
+# Lines starting with # are ignored. Delete the leading "# " to publish one.
+#
+# badminton-01.jpg |
+# badminton-02.jpg |
+# badminton-03.jpg |
+# badminton-04.jpg |
+# badminton-05.jpg |
+# badminton-06.jpg |
+# badminton-07.jpg |

@@ -1,0 +1,13 @@
+# build output
+_site/
+
+# the README autobiography — never published
+private/
+
+# camera originals. Kept on disk so images can be regenerated at higher
+# quality, but not committed: 34 MB that the site never serves.
+originals/
+
+.DS_Store
+**/.DS_Store
+__pycache__/
