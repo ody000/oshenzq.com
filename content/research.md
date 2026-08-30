@@ -25,7 +25,7 @@ cooperative context independently of kinematics — that is, whether the cortex
 represents *the two hands are working together on one task* as something separable
 from what each hand is doing.
 
-Oct 2025 - Feb 2026 :: Feature reliability in intracortical recordings :: BrainGate · Independent Project
+Fall 2025 :: Feature reliability in intracortical recordings :: BrainGate · Independent Project
 Analysed intracortical population activity from a participant with C4 spinal cord
 injury across ten multisensory conditions, combining motor control, proprioceptive
 feedback and vision. Compared spike-band power against threshold crossings and found

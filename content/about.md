@@ -6,21 +6,24 @@ description: Ziqi Shen — Sc.B. Cognitive Neuroscience and Computer Science can
 ---
 
 <div class="lede" markdown="1">
-<div markdown="1">
-
-I am pursuing Sc.B. degrees in Cognitive Neuroscience and Computer Science at
-Brown University. My goal is to develop algorithmically robust brain–computer
-interface systems that decode and preserve declarative memory. I am building the
-methodological foundations for that goal in systems neuroscience and in machine
-learning practices for high-dimensional neural signals.
-
-Occasionally I am referred to as Odysseus, or Ody, which are my other names.
-
-As a double life, I play badminton at the professional level.
-
-</div>
 <div class="portrait" markdown="1">
 ![Ziqi Shen](/assets/img/portrait.jpg)
+</div>
+<div class="lede-text" markdown="1">
+
+
+I am pursuing Sc.B. degrees in Cognitive Neuroscience and Computer Science at
+Brown University. My professional goal is to develop robust brain–computer 
+interface systems that decode and preserve declarative memory. I am building 
+the methodological foundations for that goal in systems neuroscience and in machine
+learning practices for high-dimensional neural signals.
+
+Occasionally people call me Odysseus or Ody, which are my other names.
+
+As a double life, I'm working toward playing badminton at the professional level.
+My other extracurricular interest include classical music, classical literature,
+science fiction, philosophy, and enjoying fine arts and museums.
+
 </div>
 </div>
 
