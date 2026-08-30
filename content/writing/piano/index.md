@@ -4,7 +4,7 @@ kind: chapter
 lang: en
 date: 2023-12
 dateline: Winter 2023
-summary: I did not begin the piano because I liked it. On practising something before you are old enough to want it.
+summary: I did not begin the piano because I liked it; but it ended up being enjoyable.
 alt_url: /writing/piano/zh/
 alt_label: 中文
 description: I did not begin the piano because I liked it. On practising something before you are old enough to want it.

@@ -9,8 +9,8 @@ description: Writing, artwork, and documents by Ziqi Shen.
 
 ## Writing
 
-Selected chapters from *README 21*, in English and Chinese —
-**[read them here](/writing/)**.
+I have two autobiographies: one dedicated to my 17-year-old self and the other to the 21-year-old. I simply call them "README" like how github repositories have their description files. The follows are selected chapters from *README 21*. I write originally in Chinese but translated everything to English for my American friends.
+**[README 21](/writing/)**.
 
 ## Arts
 

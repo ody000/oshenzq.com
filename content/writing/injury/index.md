@@ -4,7 +4,7 @@ kind: chapter
 lang: en
 date: 2024-12
 dateline: Winter 2024
-summary: 15 July 2023, the Bay State Games. A dull pain behind the right armpit, and the long argument with a body that will not cooperate.
+summary: Right rotator cuff sprain on 15 July 2023 at the Bay State Games.
 alt_url: /writing/injury/zh/
 alt_label: 中文
 description: 15 July 2023, the Bay State Games. A dull pain behind the right armpit, and the long argument with a body that will not cooperate.

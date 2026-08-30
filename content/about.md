@@ -35,11 +35,11 @@ As a double life, I play badminton at the professional level.
 ## Currently
 
 ::: entries
-2025 — :: BrainGate :: Research Assistant · PI Leigh Hochberg · Brown University
+May 2025 — :: BrainGate :: Research Assistant · PI Leigh Hochberg · Brown University
 Intracortical decoding for people with tetraplegia. Honors thesis on bimanual
 cooperative context in motor cortex.
 
-2024 — :: Favila Memory Lab :: Research Assistant · PI Serra E. Favila · Brown University
+Jan 2025 — :: Favila Memory Lab :: Research Assistant · PI Serra E. Favila · Brown University
 Representational geometry of human visual cortex, and how it compares to deep
 network embeddings.
 :::

@@ -4,7 +4,7 @@ kind: chapter
 lang: en
 date: 2024-07
 dateline: Summer 2024
-summary: A Singapore Symphony concert, a violinist my own age, and the question of what a life gets measured against.
+summary: The question of what a life gets measured against.
 alt_url: /writing/second-existential-crisis/zh/
 alt_label: 中文
 description: A Singapore Symphony concert, a violinist my own age, and the question of what a life gets measured against.

@@ -4,7 +4,7 @@ kind: chapter
 lang: en
 date: 2024-07
 dateline: Summer 2024
-summary: Training abroad under coaches from Malaysia, Indonesia, India and Nepal, and what constant switching does to a game.
+summary: Training aboard (2023-25)
 alt_url: /writing/badminton-ii/zh/
 alt_label: 中文
 description: Training abroad under coaches from Malaysia, Indonesia, India and Nepal, and what constant switching does to a game.

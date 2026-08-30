@@ -4,7 +4,7 @@ kind: chapter
 lang: en
 date: 2026-04
 dateline: Spring 2026
-summary: In FTL, humans have no special ability except that they learn 10% faster. On academic learning, skill acquisition, and becoming my own mentor.
+summary: On academic learning, skill acquisition, and becoming my own mentor.
 alt_url: /writing/learning-rules/zh/
 alt_label: 中文
 description: In FTL, humans have no special ability except that they learn 10% faster. On academic learning, skill acquisition, and becoming my own mentor.

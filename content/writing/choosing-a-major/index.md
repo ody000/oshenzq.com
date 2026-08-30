@@ -4,7 +4,7 @@ kind: chapter
 lang: en
 date: 2025-07
 dateline: Summer 2025
-summary: Confirming Cognitive Neuroscience and Computer Science in the first week of sophomore spring, and the reasoning that got me there.
+summary: The reason for CogNeuro and CS as undergrad degrees.
 alt_url: /writing/choosing-a-major/zh/
 alt_label: 中文
 description: Confirming Cognitive Neuroscience and Computer Science in the first week of sophomore spring, and the reasoning that got me there.

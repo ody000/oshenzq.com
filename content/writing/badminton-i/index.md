@@ -4,10 +4,10 @@ kind: chapter
 lang: en
 date: 2023-12
 dateline: Winter 2023
-summary: Starting late, in Shanghai — with my high-school TED talk, “Being good at badminton is to be a good person”, as a prelude.
+summary: “Being good at badminton is to be a good person.”
 alt_url: /writing/badminton-i/zh/
 alt_label: 中文
-description: Starting late, in Shanghai — with my high-school TED talk, “Being good at badminton is to be a good person”, as a prelude.
+description: “Being good at badminton is to be a good person.”
 ---
 
 # Badminton I

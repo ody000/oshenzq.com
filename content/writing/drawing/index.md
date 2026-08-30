@@ -4,7 +4,7 @@ kind: chapter
 lang: en
 date: 2023-12
 dateline: Winter 2023
-summary: Hundreds of A3 sheets, a studio in Shanghai, and seven years of charcoal — how learning to draw trained my eye rather than my hand.
+summary: It's about the vision and not the hand-skills.
 alt_url: /writing/drawing/zh/
 alt_label: 中文
 description: Hundreds of A3 sheets, a studio in Shanghai, and seven years of charcoal — how learning to draw trained my eye rather than my hand.
