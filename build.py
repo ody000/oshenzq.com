@@ -83,22 +83,32 @@ def gallery(name, kind):
     return f'<div class="gallery {kind}">' + "".join(tiles) + "</div>"
 
 
-def writing_index(pages):
-    """{{writing_index}} -> entry rows for everything in content/writing/, newest first."""
-    posts = [p for p in pages if p["url"].startswith("/writing/")]
+def chapter_index(pages):
+    """{{chapters}} -> one row per English chapter, each linking to its 中文 twin."""
+    posts = [p for p in pages if p["meta"].get("kind") == "chapter"]
     if not posts:
-        return '<p class="muted"><em>Nothing published here yet.</em></p>'
+        return '<p><em>Nothing published here yet.</em></p>'
     posts.sort(key=lambda p: p["meta"].get("date", ""), reverse=True)
     rows = []
     for p in posts:
         m = p["meta"]
+        alt = (f' <a class="alt" href="{m["alt_url"]}">{esc(m.get("alt_label", ""))}</a>'
+               if m.get("alt_url") else "")
         rows.append(
-            f'<div class="entry"><div class="when">{esc(m.get("date", ""))}</div>'
-            f'<div class="what"><div class="title"><a href="{p["url"]}">{esc(m.get("title", ""))}</a></div>'
+            f'<div class="entry"><div class="when">{esc(m.get("dateline", ""))}</div>'
+            f'<div class="what"><div class="title"><a href="{p["url"]}">{esc(m.get("title", ""))}</a>{alt}</div>'
             + (f'<p>{esc(m["summary"])}</p>' if m.get("summary") else "")
-            + "</div></div>"
-        )
+            + "</div></div>")
     return '<div class="entries">' + "".join(rows) + "</div>"
+
+
+def lang_bar(meta):
+    """{{lang}} -> a link back to the index, plus the English / 中文 switch."""
+    here = "English" if meta.get("lang") == "en" else "中文"
+    alt = (f'<a href="{meta["alt_url"]}">{esc(meta.get("alt_label", ""))}</a>'
+           if meta.get("alt_url") else "")
+    return ('<div class="pagebar"><a class="back" href="/writing/">All writing</a>'
+            f'<span class="langs"><span class="here">{here}</span>{alt}</span></div>')
 
 
 def entries_block(raw, cls=""):
@@ -156,13 +166,15 @@ def esc(s):
              .replace(">", "&gt;").replace('"', "&quot;"))
 
 
-def expand(html, pages):
+def expand(html, pages, meta):
     """Replace shortcodes. Markdown wraps a lone shortcode in <p>...</p>; since these
     expand to block-level <div>s, the surrounding <p> is matched and dropped."""
     html = re.sub(r"(?:<p>)?\{\{\s*gallery:\s*([\w/-]+)\s*\}\}(?:</p>)?",
                   lambda m: gallery(m.group(1), "art" if "art" in m.group(1) else "photo"), html)
-    html = re.sub(r"(?:<p>)?\{\{writing_index\}\}(?:</p>)?",
-                  lambda _m: writing_index(pages), html)
+    html = re.sub(r"(?:<p>)?\{\{chapters\}\}(?:</p>)?",
+                  lambda _m: chapter_index(pages), html)
+    html = re.sub(r"(?:<p>)?\{\{lang\}\}(?:</p>)?",
+                  lambda _m: lang_bar(meta), html)
     return html
 
 
@@ -172,7 +184,12 @@ def collect():
     for md_file in sorted(CONTENT.rglob("*.md")):
         meta, body = split_front_matter(md_file.read_text(encoding="utf-8"))
         rel = md_file.relative_to(CONTENT).with_suffix("")
-        url = "/" if rel.name == "about" and rel.parent == Path(".") else f"/{rel.as_posix()}/"
+        if rel.name == "about" and rel.parent == Path("."):
+            url = "/"                                  # about.md is the front page
+        elif rel.name == "index":
+            url = f"/{rel.parent.as_posix()}/"          # foo/index.md -> /foo/
+        else:
+            url = f"/{rel.as_posix()}/"
         pages.append({"meta": meta, "body": body, "url": url, "src": md_file})
     return pages
 
@@ -200,18 +217,22 @@ def build():
         body, stash = protect_blocks(p["body"])
         MD.reset()
         content = restore_blocks(MD.convert(body), stash)
-        content = expand(content, pages)
+        content = expand(content, pages, meta)
 
         title = meta.get("title", "")
         title_tag = SITE_NAME if p["url"] == "/" else f"{title} · {SITE_NAME}"
         robots = '<meta name="robots" content="noindex,nofollow">' if meta.get("robots") == "noindex" else ""
 
+        alt_link = (f'<link rel="alternate" hreflang="{"zh" if meta.get("lang") == "en" else "en"}"'
+                    f' href="{SITE_URL}{meta["alt_url"]}">' if meta.get("alt_url") else "")
+
         html = (template
+                .replace("{{html_lang}}", meta.get("lang", "en"))
+                .replace("{{robots}}", robots + alt_link)
                 .replace("{{title_tag}}", esc(title_tag))
                 .replace("{{description}}", esc(meta.get("description", "")))
                 .replace("{{canonical}}", SITE_URL + p["url"])
                 .replace("{{site_url}}", SITE_URL)
-                .replace("{{robots}}", robots)
                 .replace("{{nav}}", nav_html(pages, p["url"]))
                 .replace("{{content}}", content))
 

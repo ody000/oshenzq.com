@@ -167,6 +167,35 @@ figure.plate{margin:30px 0}
 figure.plate img{width:100%;background:var(--bg-sunk)}
 figure.plate figcaption{font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:8px}
 
+/* ---------- language / navigation bar on a chapter ---------- */
+.pagebar{
+  font-family:var(--sans);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  margin:-14px 0 40px;padding-bottom:11px;border-bottom:1px solid var(--rule);
+}
+.pagebar a{color:var(--muted);text-decoration:none}
+.pagebar a:hover{color:var(--ink)}
+.pagebar .langs{display:flex;gap:14px}
+.pagebar .here{color:var(--ink);font-weight:600}
+
+/* the 中文 / English link beside a title in the chapter index */
+.entry .title .alt{
+  font-family:var(--sans);font-size:12.5px;font-weight:400;letter-spacing:.04em;
+  color:var(--muted);margin-left:11px;text-decoration:none;
+  border-bottom:1px solid var(--rule-mid);
+}
+.entry .title .alt:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* Chinese pages: Source Serif has no CJK glyphs, so a CJK serif leads the stack.
+   Chinese text also wants a little more line-height at the same size. */
+html[lang="zh"] body{
+  font-family:'Songti SC','Source Han Serif SC','Noto Serif CJK SC',
+              'Source Serif 4',var(--cjk),serif;
+  line-height:1.78;
+}
+html[lang="zh"] h1{font-family:inherit;font-weight:600;letter-spacing:0}
+html[lang="zh"] p{max-width:40em}
+
 /* ---------- footer ---------- */
 footer.site{
   margin-top:76px;padding:22px 0 56px;border-top:1px solid var(--rule);

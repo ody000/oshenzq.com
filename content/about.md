@@ -52,5 +52,5 @@ Coursework in algorithms, systems, NeuroAI, computer vision, computational
 neuroscience, information theory, abstract algebra, and memory and the hippocampus.
 
 2020 – 2023 :: Shanghai Pinghe School :: International Baccalaureate Diploma · 44 / 45
-Higher Level in Physics, Biology and Mathematics AA.
+Higher Level in Chinese A Language and Literature, English A Literature, Economics, Physics, Biology and Mathematics AA.
 :::

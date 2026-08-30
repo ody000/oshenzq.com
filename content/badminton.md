@@ -7,14 +7,14 @@ description: Ziqi Shen — captain of the Brown University Badminton Club, ranke
 
 # Badminton
 
-I play badminton at the professional level and am ranked in the top 30 in the
-United States. Since 2023 I have been captain of the Brown University Badminton
-Club, where I coach team practices, organise recruitment, and drive people to
-tournaments. Training takes about twenty hours a week.
+I aim to play badminton at the professional level and am training 15-20 hours a week to work toward that goal. Since 2023 I have been captain of the Brown University Badminton Club, where I coach team practices, organise recruitment, and drive people to tournaments. 
 
 ::: entries
-2023 — :: Captain, Brown University Badminton Club :: Coaching, recruitment, logistics
-Ranked top 30 in the United States. Roughly twenty hours of training each week.
+March 2026 :: Duke Open B Mens Doubles 1st Place
+
+April 2025 :: National Collegiate Team Championship Division D2A 1st Place
+
+Expected November 2026 :: BWF Level 1 Coaching Certificate
 :::
 
 {{gallery: badminton}}

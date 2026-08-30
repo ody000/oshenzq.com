@@ -27,7 +27,9 @@ content/about.md       ->  /            (front page)
 content/research.md    ->  /research/
 content/badminton.md   ->  /badminton/
 content/misc.md        ->  /misc/
-content/writing/*.md   ->  /writing/<name>/
+content/writing/index.md          ->  /writing/
+content/writing/<slug>/index.md   ->  /writing/<slug>/       (English)
+content/writing/<slug>/zh.md      ->  /writing/<slug>/zh/    (中文)
 ```
 
 To change text, open the file and type. To preview:
@@ -130,21 +132,43 @@ which is the current state.
 Make `assets/img/travel/`, add photos, run `./tools/prep-images.sh travel`, then put
 `{{gallery: travel}}` on any page.
 
-### Publish a piece of writing
-Create `content/writing/some-essay.md`:
+### Publish another README chapter
+Chapters live in `private/source/` (four text files, never published) and are split
+into pages by one script. To add one, append a row to `CHAPTERS` in
+`tools/import-readme.py` — slug, the English heading, the Chinese heading, both
+titles, a sortable date, a displayed dateline, and a one-line summary — then:
+
+```bash
+python3 tools/import-readme.py
+```
+
+It writes `content/writing/<slug>/index.md` (English) and
+`content/writing/<slug>/zh.md` (中文), and the chapter appears on `/writing/`
+automatically. **Re-running overwrites both files**, so once a chapter is imported,
+edit the Markdown and not the source text.
+
+To unpublish a chapter, delete its folder from `content/writing/`.
+
+### Publish any other piece of writing
+Create `content/writing/<slug>/index.md`:
 
 ```markdown
 ---
-title: The title of the essay
-date: 2026-09-01
-summary: One line shown in the index on the Misc page.
+title: The title
+kind: chapter          # this is what puts it in the /writing/ index
+lang: en
+date: 2026-09-01       # sorts the index, newest first
+dateline: Autumn 2026  # what the reader sees
+summary: One line shown in the index.
 ---
 
-Your essay.
+# The title
+
+Your writing.
 ```
 
-It appears automatically in the Writing section of `/misc/`. To keep a page off
-Google and out of the index, add `robots: noindex` to its front matter.
+Add `alt_url` and `alt_label` to pair it with a translation. To keep a page out of
+Google and out of the index, add `robots: noindex` and drop the `kind` line.
 
 ---
 
@@ -183,9 +207,9 @@ custom domain to `oshenzq.com` with "Enforce HTTPS" enabled.
 
 ## Not published
 
-`private/` holds the README autobiography PDFs. It is listed in `.gitignore` and is
-never committed or deployed. Selected chapters can be published later as pages under
-`content/writing/`.
+`private/` holds the full README autobiography — the PDFs and the four source text
+files. It is listed in `.gitignore`, so it is never committed and never deployed.
+Only the eight chapters listed in `tools/import-readme.py` reach the site.
 
 ## Originals
 
