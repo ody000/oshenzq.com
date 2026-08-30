@@ -42,9 +42,6 @@ cooperative context in motor cortex.
 2024 — :: Favila Memory Lab :: Research Assistant · PI Serra E. Favila · Brown University
 Representational geometry of human visual cortex, and how it compares to deep
 network embeddings.
-
-2026 :: Predictive Science Lab :: SURF Fellow · PI Ilias Bilionis · Purdue University
-Optimal transport as a loss for medical-imaging inverse problems.
 :::
 
 ## Education
@@ -56,23 +53,4 @@ neuroscience, information theory, abstract algebra, and memory and the hippocamp
 
 2020 – 2023 :: Shanghai Pinghe School :: International Baccalaureate Diploma · 44 / 45
 Higher Level in Physics, Biology and Mathematics AA.
-:::
-
-## Honors
-
-::: entries
-2026 :: Summer Undergraduate Research Fellowship :: Purdue University
-
-2025 :: Undergraduate Teaching and Research Award :: Brown University
-:::
-
-## Elsewhere
-
-::: entries
-2025 — :: Meiklejohn Peer Advisor :: Brown University
-Advising six students across every class year on course and concentration
-choices, and organising advising events and socials.
-
-2023 — :: Captain, Brown University Badminton Club :: Ranked top 30 in the United States
-Coaching team practices, organising recruitment, and running transportation.
 :::

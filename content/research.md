@@ -55,33 +55,17 @@ Analysed eye-tracking data from the learning phase of a memory experiment to
 examine how visual attention develops over the course of encoding.
 :::
 
-## Computation and Machine Learning
+## Publications
 
-::: entries
-2026 :: A neural optimal transport loss for biomedical alignment :: Predictive Science Lab · PI Ilias Bilionis · Purdue
-Developing an optimal-transport loss for medical-imaging inverse problems,
-including joint MRI registration and segmentation. Manuscript in preparation.
-
-2024 :: Astrocyte detection in microscopy :: Center for Computation & Visualization · Brown
-Trained a YOLO-based computer vision pipeline to detect astrocytes across a
-1,200-image microscopy dataset, reaching 79% accuracy and exceeding a published
-2018 *Nature* baseline. Built Dockerized TensorFlow workflows and scaled training on
-Brown's OSCAR high-performance computing cluster.
-:::
-
-## Publications and Manuscripts
-
-::: entries
-In prep. :: A Neural Optimal Transport Loss for Biomedical Multimodal Distribution-to-Atlas Alignment :: Dey, A., **Shen, Z.**, Bilionis, I.
+::: entries compact
+2023 :: [Efficacy of Sports Interventions for Children with Autism Spectrum Disorder and Promising Targets: A Review](https://doi.org/10.47611/jsrhs.v12i1.3894) :: **Shen, Z.** · *Journal of Student Research*, 12(1)
 
 In prep. :: Shepard's Universal Law of Generalization in Human Visual Cortex: fMRI Evidence and Representational Alignment with Deep Neural Networks :: **Shen, Z.**, Carstensen, D., Favila, S.
-
-2023 :: [Efficacy of Sports Interventions for Children with Autism Spectrum Disorder and Promising Targets: A Review](https://doi.org/10.47611/jsrhs.v12i1.3894) :: **Shen, Z.** · *Journal of Student Research*, 12(1)
 :::
 
 ## Presentations
 
-::: entries
+::: entries compact
 2026 :: Diffeomorphic Neural Optimal Transport for Agentic MRI Joint Registration and Segmentation :: Poster · Purdue Summer Undergraduate Research Symposium
 
 2025 :: Towards Restoring Upper Limb Movement for Individuals with Paralysis using a Posture-tracking Unity Game :: Poster · Brown University Summer Research Symposium

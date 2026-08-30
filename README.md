@@ -114,16 +114,17 @@ That resizes each one to 1800px for the click-through view and makes a 700px
 thumbnail for the grid. Rebuild and the new images appear automatically. You never
 edit the page to add a photo.
 
-### Caption a photo
-Edit `assets/img/art/captions.txt`:
+### Caption a photo (optional)
+Galleries have no captions by default. To add them, create
+`assets/img/art/captions.txt`:
 
 ```
 art-03.jpg | Elderly man — graphite, 2021
 ```
 
-One line per image, `filename | caption`. Lines starting with `#` are ignored, so
-that file currently ships with every caption commented out. Uncomment and correct
-them to publish.
+One line per image, `filename | caption`. Only the images you list get a caption;
+lines starting with `#` are ignored. Without this file the gallery is captionless,
+which is the current state.
 
 ### Add a new gallery
 Make `assets/img/travel/`, add photos, run `./tools/prep-images.sh travel`, then put

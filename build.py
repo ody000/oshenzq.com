@@ -101,7 +101,7 @@ def writing_index(pages):
     return '<div class="entries">' + "".join(rows) + "</div>"
 
 
-def entries_block(raw):
+def entries_block(raw, cls=""):
     """::: entries ... ::: -> styled entry rows.
 
     Each entry is one paragraph. Its first line is
@@ -131,16 +131,16 @@ def entries_block(raw):
             + (f'<div class="where">{where_html}</div>' if where else "")
             + desc_html + "</div></div>"
         )
-    return '<div class="entries">' + "".join(out) + "</div>"
+    return f'<div class="entries{cls}">' + "".join(out) + "</div>"
 
 
 def protect_blocks(body):
     """Pull ::: entries ::: blocks out before Markdown runs; return (body, stash)."""
     stash = []
     def take(m):
-        stash.append(entries_block(m.group(1)))
+        stash.append(entries_block(m.group(2), " compact" if m.group(1) else ""))
         return f"\n\nENTRIESPLACEHOLDER{len(stash) - 1}\n\n"
-    body = re.sub(r"^:::\s*entries\s*$(.*?)^:::\s*$", take, body,
+    body = re.sub(r"^:::\s*entries\s*(compact)?\s*$(.*?)^:::\s*$", take, body,
                   flags=re.MULTILINE | re.DOTALL)
     return body, stash
 
